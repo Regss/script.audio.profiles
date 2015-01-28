@@ -180,13 +180,16 @@ class GUI(xbmcgui.WindowDialog):
         # change all value to string
         if len(settingsToSave) > 0:
             for set, val in settingsToSave.items():
-                if str(val) == 'True' or str(val) == 'False': # lowercase bolean values
+                if val == True or val == False: # lowercase bolean values
                     settingsToSave[set] = str(val).lower()
                 else:
-                    settingsToSave[set] = str(val)
+                    if type(val) is int:
+                        settingsToSave[set] = str(val)
+                    else:
+                        settingsToSave[set] = val.encode('utf-8')
         
         # prepare JSON string to save to file
-        jsonToWrite = str(json.dumps(settingsToSave))
+        jsonToWrite = json.dumps(settingsToSave)
         
         # create dir in addon data if not exist
         if not xbmcvfs.exists(__datapath__):
@@ -275,7 +278,7 @@ class Switch:
             if setName == 'volume':
                 xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Application.SetVolume", "params": {"volume": ' + jsonResult['volume'] + '}, "id": 1}')
             else:
-                xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "' + setName + '", "value": ' + setValue + '}, "id": 1}')
+                xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "' + setName + '", "value": ' + setValue.encode('utf-8') + '}, "id": 1}')
         
         Message().msg(sName[int(profile)])
         

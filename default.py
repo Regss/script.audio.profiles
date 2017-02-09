@@ -62,7 +62,7 @@ class PROFILES:
             self.save()
             return
         
-        if mode == 'service':
+        if mode == 'popup':
             enabledProfiles = self.getEnabledProfiles()
             xbmcgui.Window(10000).setProperty(ADDON_ID + '_autoclose', '1' if 'true' in ADDON.getSetting('player_autoclose') else '0')
             ret = dialog.DIALOG().start('script-audio-profiles-menu.xml', labels={10071: ADDON_LANG(32106)}, buttons=enabledProfiles[1], list=10070)
@@ -172,7 +172,7 @@ class PROFILES:
         # stop if selected (mode) profile are disabled
         if mode != '0' and 'false' in sProfile[int(mode)]:
             debug.notify(ADDON_LANG(32103) + ' (' + sName[int(mode)] + ')')
-            debug.notice('[CHECK]: This profile is dosabled in addon settings - ' + str(mode))
+            debug.notice('[CHECK]: This profile is disabled in addon settings - ' + str(mode))
             return False
         
         # check if profile have settings file

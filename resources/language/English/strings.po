@@ -117,27 +117,27 @@ msgstr ""
 
 #: Settings
 msgctxt "#32021"
-msgid "Auto load profile for GUI"
+msgid "Profile for GUI"
 msgstr ""
 
 #: Settings
 msgctxt "#32022"
-msgid "Auto load profile for Movies"
+msgid "Profile for Movies"
 msgstr ""
 
 #: Settings
 msgctxt "#32023"
-msgid "Auto load profile for TVShows"
+msgid "Profile for TVShows"
 msgstr ""
 
 #: Settings
 msgctxt "#32024"
-msgid "Auto load profile for PVR"
+msgid "Profile for PVR TV"
 msgstr ""
 
 #: Settings
 msgctxt "#32025"
-msgid "Auto load profile for Music"
+msgid "Profile for Music"
 msgstr ""
 
 #: Settings
@@ -163,6 +163,41 @@ msgstr ""
 #: Settings
 msgctxt "#32030"
 msgid "Toggle state"
+msgstr ""
+
+#: Settings
+msgctxt "#32031"
+msgid "Profile for Videos (not from library)"
+msgstr ""
+
+#: Settings
+msgctxt "#32032"
+msgid "Profile for Music Videos"
+msgstr ""
+
+#: Settings
+msgctxt "#32033"
+msgid "Profile for Unknown content type"
+msgstr ""
+
+#: Settings
+msgctxt "#32034"
+msgid "Profile for PVR Radio"
+msgstr ""
+
+#: Settings
+msgctxt "#32035"
+msgid "Video"
+msgstr ""
+
+#: Settings
+msgctxt "#32036"
+msgid "Audio"
+msgstr ""
+
+#: Settings
+msgctxt "#32037"
+msgid "Other"
 msgstr ""
 
 #: Script

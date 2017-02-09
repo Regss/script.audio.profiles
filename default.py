@@ -259,7 +259,7 @@ class PROFILES:
         f.close()
         
         # CEC
-        if int(sCec) > 0:
+        if sCec != '' and int(sCec) > 0:
             debug.notice('[SENDING CEC COMMAND]: ' + cecCommands[int(sCec)])
             xbmc.executebuiltin(cecCommands[int(sCec)])
             

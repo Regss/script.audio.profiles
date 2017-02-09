@@ -25,8 +25,7 @@ class Monitor(xbmc.Monitor):
         xbmc.Monitor.__init__(self)
         
         # gui
-        if ADDON.getSetting('auto_gui') in profiles:
-            xbmc.executebuiltin('XBMC.RunScript(' + ADDON_ID + ', ' + ADDON.getSetting('auto_gui') + ')')
+        self.changeProfile(ADDON.getSetting('auto_gui'))
             
     def onNotification(self, sender, method, data):
         
@@ -36,8 +35,7 @@ class Monitor(xbmc.Monitor):
             debug.debug("[MONITOR] METHOD: " + str(method) + " DATA: " + str(data))
             
             # gui
-            if ADDON.getSetting('auto_gui') in profiles:
-                xbmc.executebuiltin('XBMC.RunScript(' + ADDON_ID + ', ' + ADDON.getSetting('auto_gui') + ')')
+            self.changeProfile(ADDON.getSetting('auto_gui'))
         
         if 'Player.OnPlay' in method:
             debug.debug("[MONITOR] METHOD: " + str(method) + " DATA: " + str(data))
@@ -65,16 +63,20 @@ class Monitor(xbmc.Monitor):
                     else:
                         set = None
                 
-                if set is not None and ADDON.getSetting(set) in profiles:
+                if set is not None:
+                    self.changeProfile(ADDON.getSetting(set))
                 
-                    # get last loaded profile
-                    lastProfile = self.getLastProfile()
-                    debug.debug("[MONITOR] Last loaded profile: " + lastProfile + " To switch profile: " + ADDON.getSetting(set))
-                    
-                    if lastProfile != ADDON.getSetting(set):
-                        xbmc.executebuiltin('XBMC.RunScript(' + ADDON_ID + ', ' + ADDON.getSetting(set) + ')')
-                    else:
-                        debug.debug("[MONITOR] Switching omitted (same profile)")
+    def changeProfile(self, profile):
+        
+        if profile in profiles:
+            # get last loaded profile
+            lastProfile = self.getLastProfile()
+            debug.debug("[MONITOR] Last loaded profile: " + lastProfile + " To switch profile: " + profile)
+            
+            if lastProfile != profile:
+                xbmc.executebuiltin('XBMC.RunScript(' + ADDON_ID + ', ' + profile + ')')
+            else:
+                debug.debug("[MONITOR] Switching omitted (same profile)")
     
     def getLastProfile(self):
         try:

@@ -56,11 +56,6 @@ msgid "Notifications"
 msgstr ""
 
 #: Settings
-msgctxt "#32020"
-msgid "Debuging"
-msgstr ""
-
-#: Settings
 msgctxt "#32002"
 msgid "Settings"
 msgstr ""

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Audio Profiles for KODI\n"
-"PO-Revision-Date: 2017-02-07 10:45+0000\n"
+"PO-Revision-Date: 2017-02-09 10:34+0000\n"
 "Last-Translator: Regss <regss84@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/movielib/audio-profiles-for-kodi/language/pl/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,11 +64,6 @@ msgstr "Debugowanie"
 msgctxt "#32019"
 msgid "Notifications"
 msgstr "Notyfikacje"
-
-#: Settings
-msgctxt "#32020"
-msgid "Debuging"
-msgstr "Debugowanie"
 
 #: Settings
 msgctxt "#32002"

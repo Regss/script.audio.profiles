@@ -228,7 +228,8 @@ class PROFILES:
         quote_needed = [
         'audiooutput.audiodevice',
         'audiooutput.passthroughdevice',
-        'locale.audiolanguage'
+        'locale.audiolanguage',
+        'lookandfeel.soundskin'
         ]
         
         # set settings readed from profile file

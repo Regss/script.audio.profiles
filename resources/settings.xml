@@ -26,6 +26,7 @@
         <setting label="32016" type="bool" id="player_autoclose" default="false" enable="eq(-1,true)" />
     </category>
     <category label="32014">
+        <setting label="32038" type="enum" id="auto_default" lvalues="32026|32007|32008|32009|32010" />
         <setting label="32021" type="enum" id="auto_gui" lvalues="32026|32007|32008|32009|32010" />
         <setting type="lsep" label="32035" />
         <setting label="32022" type="enum" id="auto_movies" lvalues="32026|32007|32008|32009|32010" />
@@ -41,6 +42,5 @@
     </category>
     <category label="32018">
         <setting label="32019" type="bool" id="notify" default="true" />
-        <setting label="32020" type="bool" id="debug" default="false" />
     </category>
 </settings>

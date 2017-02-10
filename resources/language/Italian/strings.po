@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Audio Profiles for KODI\n"
-"PO-Revision-Date: 2017-02-09 10:34+0000\n"
-"Last-Translator: Regss <regss84@gmail.com>\n"
+"PO-Revision-Date: 2017-02-10 11:22+0000\n"
+"Last-Translator: Peppe Calvo <peppe.calvo.cc@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/movielib/audio-profiles-for-kodi/language/it/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,11 +56,6 @@ msgstr "Mostra menu di selezione stream all'inizio della riproduzione"
 msgctxt "#32016"
 msgid "Auto close select menu"
 msgstr "Chiudi automaticamente il menu di selezione"
-
-#: Settings
-msgctxt "#32018"
-msgid "Debug"
-msgstr "Debug"
 
 #: Settings
 msgctxt "#32019"
@@ -206,6 +201,11 @@ msgstr "Audio"
 msgctxt "#32037"
 msgid "Other"
 msgstr "Altro"
+
+#: Settings
+msgctxt "#32038"
+msgid "Profile for KODI Start/Wakeup (Default)"
+msgstr "Profilo per Avvio/Risveglio di Kodi (Predefinito)"
 
 #: Script
 msgctxt "#32100"

@@ -46,11 +46,6 @@ msgid "Auto close select menu"
 msgstr ""
 
 #: Settings
-msgctxt "#32018"
-msgid "Debug"
-msgstr ""
-
-#: Settings
 msgctxt "#32019"
 msgid "Notifications"
 msgstr ""
@@ -193,6 +188,11 @@ msgstr ""
 #: Settings
 msgctxt "#32037"
 msgid "Other"
+msgstr ""
+
+#: Settings
+msgctxt "#32038"
+msgid "Profile for KODI Start/Wakeup (Default)"
 msgstr ""
 
 #: Script

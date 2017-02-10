@@ -24,22 +24,25 @@ class Monitor(xbmc.Monitor):
     def __init__(self):
         xbmc.Monitor.__init__(self)
         
-        # gui
-        self.changeProfile(ADDON.getSetting('auto_gui'))
+        # default for kodi start
+        self.changeProfile(ADDON.getSetting('auto_default'))
             
     def onNotification(self, sender, method, data):
         
         data = json.loads(data)
         
-        if 'Player.OnStop' in method or 'System.OnWake' in method:
+        if 'System.OnWake' in method:
             debug.debug("[MONITOR] METHOD: " + str(method) + " DATA: " + str(data))
+            # default for kodi wakeup
+            self.changeProfile(ADDON.getSetting('auto_default'))
             
+        if 'Player.OnStop' in method:
+            debug.debug("[MONITOR] METHOD: " + str(method) + " DATA: " + str(data))
             # gui
             self.changeProfile(ADDON.getSetting('auto_gui'))
         
         if 'Player.OnPlay' in method:
             debug.debug("[MONITOR] METHOD: " + str(method) + " DATA: " + str(data))
-            
             
             # auto show dialog
             if 'true' in ADDON.getSetting('player_show'):

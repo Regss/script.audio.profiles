@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Audio Profiles for KODI\n"
-"PO-Revision-Date: 2017-02-09 10:34+0000\n"
+"PO-Revision-Date: 2017-02-10 10:29+0000\n"
 "Last-Translator: Regss <regss84@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/movielib/audio-profiles-for-kodi/language/pl/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,11 +54,6 @@ msgstr "Pokaż menu wyboru strumienia audio podczas startu odtwarzania"
 msgctxt "#32016"
 msgid "Auto close select menu"
 msgstr "Automatycznie zamknij menu wyboru strumienia audio"
-
-#: Settings
-msgctxt "#32018"
-msgid "Debug"
-msgstr "Debugowanie"
 
 #: Settings
 msgctxt "#32019"
@@ -204,6 +199,11 @@ msgstr "Audio"
 msgctxt "#32037"
 msgid "Other"
 msgstr "Inne"
+
+#: Settings
+msgctxt "#32038"
+msgid "Profile for KODI Start/Wakeup (Default)"
+msgstr "Profil dla włączania/wybudzania (Domyślny)"
 
 #: Script
 msgctxt "#32100"
